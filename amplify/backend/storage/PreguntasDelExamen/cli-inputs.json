@@ -1,0 +1,10 @@
+{
+  "resourceName": "PreguntasDelExamen",
+  "tableName": "PreguntasDelExamen",
+  "partitionKey": {
+    "fieldName": "idPregunta",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

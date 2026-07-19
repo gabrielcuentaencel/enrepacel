@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "paths": {
+    "/CrearExamen/{textoExamen}": {
+      "name": "/CrearExamen/{textoExamen}",
+      "lambdaFunction": "CrearExamen",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/VerExamenes": {
+      "name": "/VerExamenes",
+      "lambdaFunction": "VerExamenes",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/AgregarPreguntaAExamen/{idExamen}/{textoPregunta}": {
+      "name": "/AgregarPreguntaAExamen/{idExamen}/{textoPregunta}",
+      "lambdaFunction": "AgregarPreguntaAExamen",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/VerPreguntasDelExamen/{idExamen}": {
+      "name": "/VerPreguntasDelExamen/{idExamen}",
+      "lambdaFunction": "VerPreguntasDelExamen",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/AgregarPreguntaAExamenPost/{idExamen}": {
+      "name": "/AgregarPreguntaAExamenPost/{idExamen}",
+      "lambdaFunction": "AgregarPreguntaHibrida",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/CrearEstudiante": {
+      "name": "/CrearEstudiante",
+      "lambdaFunction": "CrearEstudiante",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/ResponderPreguntaDeExamen/{idEstudiante}/{idPregunta}": {
+      "name": "/ResponderPreguntaDeExamen/{idEstudiante}/{idPregunta}",
+      "lambdaFunction": "ResponderPreguntaDeExamen",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/CrearEvaluador": {
+      "name": "/CrearEvaluador",
+      "lambdaFunction": "CrearEvaluador",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/CalificarRubrica": {
+      "name": "/CalificarRubrica",
+      "lambdaFunction": "CalificarRubrica",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/EvaluarPregunta/{idRespuesta}/{idEvaluador}/{idCalificacionEnRubricas}": {
+      "name": "/EvaluarPregunta/{idRespuesta}/{idEvaluador}/{idCalificacionEnRubricas}",
+      "lambdaFunction": "EvaluarPregunta",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/AgregarPreferenciaDeEstudiante/{idRespuestaEvaluada}": {
+      "name": "/AgregarPreferenciaDeEstudiante/{idRespuestaEvaluada}",
+      "lambdaFunction": "AgregarPreferenciaDeEstudiante",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/VerPreferenciaDeEstudiante/{idPreferenciaEstudiante}": {
+      "name": "/VerPreferenciaDeEstudiante/{idPreferenciaEstudiante}",
+      "lambdaFunction": "VerPreferenciaDeEstudiante",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

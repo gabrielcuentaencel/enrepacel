@@ -1,0 +1,10 @@
+{
+  "resourceName": "RespuestasEvaluadas",
+  "tableName": "RespuestasEvaluadas",
+  "partitionKey": {
+    "fieldName": "idRespuestaEvaluada",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

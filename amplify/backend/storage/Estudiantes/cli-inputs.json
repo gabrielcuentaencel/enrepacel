@@ -1,0 +1,10 @@
+{
+  "resourceName": "Estudiantes",
+  "tableName": "Estudiantes",
+  "partitionKey": {
+    "fieldName": "idEstudiante",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

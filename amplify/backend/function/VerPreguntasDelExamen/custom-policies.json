@@ -1,0 +1,13 @@
+[
+  {
+    "Action": [
+      "dynamodb:Scan",
+      "dynamodb:Query"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:us-east-1:742873383399:table/PreguntasDelExamen-dev"
+    ],
+    "Effect": "Allow"
+  }
+]
+

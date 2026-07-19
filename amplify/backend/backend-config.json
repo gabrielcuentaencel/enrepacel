@@ -1,0 +1,396 @@
+{
+  "api": {
+    "CrearExamen": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CrearExamen"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "VerExamenes"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "AgregarPreguntaAExamen"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "VerPreguntasDelExamen"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "AgregarPreguntaHibrida"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CrearEstudiante"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ResponderPreguntaDeExamen"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CrearEvaluador"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CalificarRubrica"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "EvaluarPregunta"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "AgregarPreferenciaDeEstudiante"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "VerPreferenciaDeEstudiante"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "AgregarPreferenciaDeEstudiante": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "AgregarPreguntaAExamen": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "AgregarPreguntaHibrida": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CalificarRubrica": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CrearEstudiante": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CrearEvaluador": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CrearExamen": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "EvaluarPregunta": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "ResponderPreguntaDeExamen": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "VerExamenes": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "VerPreferenciaDeEstudiante": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "VerPreguntasDelExamen": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_AgregarPreferenciaDeEstudiante_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreferenciaDeEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_AgregarPreferenciaDeEstudiante_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreferenciaDeEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_AgregarPreguntaAExamen_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreguntaAExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_AgregarPreguntaAExamen_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreguntaAExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_AgregarPreguntaHibrida_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreguntaHibrida"
+        }
+      ]
+    },
+    "AMPLIFY_function_AgregarPreguntaHibrida_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AgregarPreguntaHibrida"
+        }
+      ]
+    },
+    "AMPLIFY_function_CalificarRubrica_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CalificarRubrica"
+        }
+      ]
+    },
+    "AMPLIFY_function_CalificarRubrica_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CalificarRubrica"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearEstudiante_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearEstudiante_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearEvaluador_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearEvaluador"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearEvaluador_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearEvaluador"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearExamen_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrearExamen_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrearExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_EvaluarPregunta_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EvaluarPregunta"
+        }
+      ]
+    },
+    "AMPLIFY_function_EvaluarPregunta_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EvaluarPregunta"
+        }
+      ]
+    },
+    "AMPLIFY_function_ResponderPreguntaDeExamen_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ResponderPreguntaDeExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_ResponderPreguntaDeExamen_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ResponderPreguntaDeExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerExamenes_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerExamenes"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerExamenes_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerExamenes"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerPreferenciaDeEstudiante_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerPreferenciaDeEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerPreferenciaDeEstudiante_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerPreferenciaDeEstudiante"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerPreguntasDelExamen_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerPreguntasDelExamen"
+        }
+      ]
+    },
+    "AMPLIFY_function_VerPreguntasDelExamen_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "VerPreguntasDelExamen"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "Estudiantes": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "Evaluadores": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "Examenes": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "PreferenciaDelEstudiante": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "PreguntasDelExamen": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "RespuestasDeEstudiantes": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "RespuestasEvaluadas": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "Rubricas": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

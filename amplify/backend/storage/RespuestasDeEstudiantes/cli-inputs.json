@@ -1,0 +1,10 @@
+{
+  "resourceName": "RespuestasDeEstudiantes",
+  "tableName": "RespuestasDeEstudiantes",
+  "partitionKey": {
+    "fieldName": "idRespuesta",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

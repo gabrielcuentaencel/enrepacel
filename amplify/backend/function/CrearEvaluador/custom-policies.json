@@ -1,0 +1,12 @@
+[
+  {
+    "Action": [
+      "dynamodb:PutItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:us-east-1:742873383399:table/Evaluadores-dev"
+    ],
+    "Effect": "Allow"
+  }
+]
+

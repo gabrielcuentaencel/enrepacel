@@ -1,0 +1,10 @@
+{
+  "resourceName": "PreferenciaDelEstudiante",
+  "tableName": "PreferenciaDelEstudiante",
+  "partitionKey": {
+    "fieldName": "idPreferenciaEstudiante",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

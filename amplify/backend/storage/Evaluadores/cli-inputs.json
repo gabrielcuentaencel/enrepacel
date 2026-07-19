@@ -1,0 +1,10 @@
+{
+  "resourceName": "Evaluadores",
+  "tableName": "Evaluadores",
+  "partitionKey": {
+    "fieldName": "idEvaluador",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

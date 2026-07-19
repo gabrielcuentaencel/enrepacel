@@ -1,0 +1,10 @@
+{
+  "resourceName": "Rubricas",
+  "tableName": "Rubricas",
+  "partitionKey": {
+    "fieldName": "idCalificacionEnRubricas",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

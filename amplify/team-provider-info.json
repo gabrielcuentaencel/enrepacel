@@ -1,0 +1,80 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-enrepacel-dev-d4186-authRole",
+      "UnauthRoleArn": "arn:aws:iam::742873383399:role/amplify-enrepacel-dev-d4186-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::742873383399:role/amplify-enrepacel-dev-d4186-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+      "UnauthRoleName": "amplify-enrepacel-dev-d4186-unauthRole",
+      "StackName": "amplify-enrepacel-dev-d4186",
+      "StackId": "arn:aws:cloudformation:us-east-1:742873383399:stack/amplify-enrepacel-dev-d4186/6daa5d40-8306-11f1-ad40-0eeaa92dbfc5",
+      "AmplifyAppId": "d39ol6epx3vnkq"
+    },
+    "categories": {
+      "storage": {
+        "Examenes": {},
+        "PreguntasDelExamen": {},
+        "Estudiantes": {},
+        "RespuestasDeEstudiantes": {},
+        "Evaluadores": {},
+        "RespuestasEvaluadas": {},
+        "Rubricas": {},
+        "PreferenciaDelEstudiante": {}
+      },
+      "function": {
+        "CrearExamen": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/CrearExamen-426f6e454b3571616137-build.zip"
+        },
+        "VerExamenes": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/VerExamenes-5070776b4873546a776a-build.zip"
+        },
+        "AgregarPreguntaAExamen": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/AgregarPreguntaAExamen-4f7351776d5066335166-build.zip"
+        },
+        "VerPreguntasDelExamen": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/VerPreguntasDelExamen-646569704247426a2f52-build.zip"
+        },
+        "AgregarPreguntaHibrida": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/AgregarPreguntaHibrida-76376730684b5a2b5931-build.zip"
+        },
+        "CrearEstudiante": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/CrearEstudiante-61476e5a75396f794777-build.zip"
+        },
+        "ResponderPreguntaDeExamen": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/ResponderPreguntaDeExamen-4454744f745572706a44-build.zip"
+        },
+        "CrearEvaluador": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/CrearEvaluador-74655471575661313443-build.zip"
+        },
+        "CalificarRubrica": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/CalificarRubrica-4d5878516c7554546274-build.zip"
+        },
+        "EvaluarPregunta": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/EvaluarPregunta-45736771456476776a42-build.zip"
+        },
+        "AgregarPreferenciaDeEstudiante": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/AgregarPreferenciaDeEstudiante-786b2f656f58762f6c51-build.zip"
+        },
+        "VerPreferenciaDeEstudiante": {
+          "deploymentBucketName": "amplify-enrepacel-dev-d4186-deployment",
+          "s3Key": "amplify-builds/VerPreferenciaDeEstudiante-5639303858566c556e47-build.zip"
+        }
+      },
+      "api": {
+        "CrearExamen": {}
+      }
+    }
+  }
+}
