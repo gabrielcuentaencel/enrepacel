@@ -34,7 +34,7 @@ export const EXAM = {
     construct: "Attachment Theory",
     difficulty: "Moderate",
     prompt:
-      "Bowlby's attachment theory posits an evolutionary basis for the infant–caregiver bond. Critically evaluate the internal working model construct and discuss how it accounts for continuity in relational patterns across the lifespan. Support your reasoning with at least one empirical study.",
+      "Explique el proceso de construcción y adaptación de pruebas psicológicas. Describa los pasos fundamentales en la elaboración de una prueba, las consideraciones sobre los formatos de ítems (respuesta cerrada vs. abierta) y los criterios para su selección. Analice las ventajas y limitaciones de adaptar un test existente versus construir uno nuevo. Finalmente, ejemplifique con un test de inteligencia cómo se aplicarían estos principios.",
   },
 }
 
@@ -43,7 +43,7 @@ export const EXAM = {
 // ---------------------------------------------------------------------------
 export const FEEDBACK_EVAL = {
   question:
-    "Explain how test–retest reliability differs from internal consistency, and describe a scenario where a scale could exhibit high internal consistency but poor test–retest reliability.",
+    "Explique el proceso de construcción y adaptación de pruebas psicológicas. Describa los pasos fundamentales en la elaboración de una prueba, las consideraciones sobre los formatos de ítems (respuesta cerrada vs. abierta) y los criterios para su selección. Analice las ventajas y limitaciones de adaptar un test existente versus construir uno nuevo. Finalmente, ejemplifique con un test de inteligencia cómo se aplicarían estos principios.",
   optionA: {
     source: "Feedback A",
     score: 8.4,
@@ -60,9 +60,9 @@ export const FEEDBACK_EVAL = {
 // TEACHER — Blind grading
 // ---------------------------------------------------------------------------
 export const TEACHER_QUESTIONS = [
-  { value: "q1", label: "Q1 · Attachment Theory" },
-  { value: "q2", label: "Q2 · Reliability & Validity" },
-  { value: "q3", label: "Q3 · Cognitive Dissonance" },
+  { value: "Pregunta 1", label: "Q1 · Attachment Theory" },
+  { value: "Pregunta 2", label: "Q2 · Reliability & Validity" },
+  { value: "Pregunta 3", label: "Q3 · Cognitive Dissonance" },
 ]
 
 export const GRADING_CONTEXT = {
@@ -73,9 +73,9 @@ export const GRADING_CONTEXT = {
   anonymizedEssay:
     "The internal working model (IWM) functions as a cognitive-affective schema derived from early caregiver interactions. Bowlby argued that these models operate largely outside conscious awareness, shaping expectations of availability and responsiveness in later relationships. Longitudinal evidence, such as the Minnesota Study of Risk and Adaptation, supports moderate continuity between infant attachment classifications and adolescent relational functioning. However, critics note that discontinuity is common following major life transitions, suggesting IWMs are revisable rather than fixed. The construct therefore offers a probabilistic — not deterministic — account of relational continuity...",
   rubric: [
-    { id: "r1", label: "Conceptual Accuracy", score: 8 },
-    { id: "r2", label: "Critical Analysis", score: 7 },
-    { id: "r3", label: "Use of Evidence", score: 6 },
+    { id: "r1", label: "Precisión y Claridad Conceptual", score: 8 },
+    { id: "r2", label: "Capacidad de Análisis Crítico", score: 7 },
+    { id: "r3", label: "Fundamentación Basada en Evidencia", score: 6 },
   ],
 }
 
@@ -89,22 +89,22 @@ export const TEACHER_FILTERS = [
 // AUDITOR — Audit & edit scores
 // ---------------------------------------------------------------------------
 export const EVALUATORS = [
-  { value: "human1", label: "Human Rater · R-04" },
-  { value: "human2", label: "Human Rater · R-07" },
-  { value: "gpt4", label: "AI · GPT-4o" },
-  { value: "claude", label: "AI · Claude 3.5" },
-  { value: "gemini", label: "AI · Gemini 1.5" },
+  { value: "Miguel", label: "Luis" },
+  { value: "Alfonso", label: "Mario" },
+  { value: "Mariano", label: "Martinez" },
+  { value: "Julieta", label: "Garcia" },
+  { value: "Gimena", label: "Bar" },
 ]
 
 export const AUDIT_RECORD = {
   student: "Respondent #A-2291 (anonymized)",
   evaluator: "AI · Gemini 1.5",
   answerExcerpt:
-    "Cognitive dissonance, as formulated by Festinger (1957), describes the aversive tension that arises when an individual holds two psychologically inconsistent cognitions. The drive to reduce this tension motivates attitude change, selective exposure to information, or trivialization of the conflicting element...",
+    "La elaboración de un test implica definir conceptualmente el constructo, redactar reactivos —ya sean cerrados para objetividad estadística o abiertos para mayor profundidad cognitiva— y seleccionarlos rigurosamente mediante sus índices de dificultad y discriminación. Al decidir el enfoque, adaptar un instrumento internacional optimiza recursos y permite comparaciones transculturales, mientras que construir uno nuevo garantiza una pertinencia contextual libre de sesgos culturales. Por ejemplo, al diseñar una prueba de inteligencia fluida, se seleccionan matrices gráficas progresivas cuyos distractores plausibles aseguran que se mida el razonamiento abstracto y no el aprendizaje previo del entorno.",
   scores: [
-    { id: "s1", label: "Conceptual Accuracy", score: 7 },
-    { id: "s2", label: "Critical Analysis", score: 5 },
-    { id: "s3", label: "Use of Evidence", score: 6 },
+    { id: "s1", label: "Precisión y Claridad Conceptual", score: 7 },
+    { id: "s2", label: "Capacidad de Análisis Crítico", score: 5 },
+    { id: "s3", label: "Fundamentación Basada en Evidencia", score: 6 },
   ],
 }
 

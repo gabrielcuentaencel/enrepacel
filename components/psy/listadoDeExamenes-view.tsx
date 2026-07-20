@@ -75,7 +75,7 @@ type DetailTab = "audit" | "gtheory" | "mfrm" | "preferences" | "calificaciones"
 
 // Datos de prueba para el listado de exámenes
 const MOCK_EXAM_LIST = [
-  { id: 1, name: "Examen Final de Psicometría", date: "2023-10-15" },
+  { id: 1, name: "Examen de Psicometría", date: "2023-10-15" },
   { id: 2, name: "Evaluación Diagnóstica: Teoría de Respuesta", date: "2023-11-02" },
   { id: 3, name: "Cuestionario de Personalidad Múltiple", date: "2023-11-20" },
 ]
@@ -132,8 +132,8 @@ export function ListadoDeExamenesView({ onLogout }: { onLogout: () => void }) {
               AK
             </div>
             <div className="min-w-0 flex-1 leading-tight">
-              <p className="truncate text-sm font-medium">Dr. A. Kessler</p>
-              <p className="truncate text-xs text-sidebar-foreground/50">Admin</p>
+              <p className="truncate text-sm font-medium">Marcos</p>
+              <p className="truncate text-xs text-sidebar-foreground/50">Administrador</p>
             </div>
             <button onClick={onLogout} className="text-sidebar-foreground/60 hover:text-sidebar-foreground">
               <LogOut className="size-4" />
@@ -282,7 +282,7 @@ function DetalleExamenView({ examName }: { examName: string }) {
         <h1 className="font-serif text-2xl font-semibold tracking-tight text-primary">
           {examName}
         </h1>
-        <p className="text-sm text-muted-foreground">Panel de análisis y edición de métricas.</p>
+        <p className="text-sm text-muted-foreground">Panel de análisis.</p>
       </header>
 
       <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as DetailTab)} className="w-full">
@@ -337,26 +337,24 @@ function VerCalificaciones() {
         {/* Selector de Pregunta */}
         <Card className="border-border/70 p-4 space-y-3 shadow-sm bg-muted/20">
           <Label className="text-sm font-semibold">Pregunta:</Label>
-          <Select defaultValue="q1">
+          <Select defaultValue="Pregunta 1">
             <SelectTrigger className="gap-2 sm:w-auto">
               <SelectValue placeholder="Seleccione una pregunta" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="q1">Pregunta 1: Teoría Cognitiva</SelectItem>
-              <SelectItem value="q2">Pregunta 2: Análisis Estadístico</SelectItem>
-              <SelectItem value="q3">Pregunta 3: Ética Clínica</SelectItem>
+              <SelectItem value="Pregunta 1">Pregunta 1: Teoría Cognitiva</SelectItem>
+              <SelectItem value="Pregunta 2">Pregunta 2: Análisis Estadístico</SelectItem>
+              <SelectItem value="Pregunta 3">Pregunta 3: Ética Clínica</SelectItem>
             </SelectContent>
           </Select>
           <div className="flex gap-2">
 
           <Button className="gap-2 w-full sm:w-auto">
-            <Upload className="size-4" />
-            Anterior
+            Pregunta Anterior
           </Button>
 
           <Button className="gap-2 w-full sm:w-auto">
-            <Upload className="size-4" />
-            Siguiente
+            Siguiente Pregunta
           </Button>
 
           </div>
@@ -365,7 +363,7 @@ function VerCalificaciones() {
         {/* Selector de Alumno */}
         <Card className="border-border/70 p-4 space-y-3 shadow-sm bg-muted/20">
           <Label className="text-sm font-semibold">Alumno:</Label>
-          <Select defaultValue="gemini">
+          <Select defaultValue="Miguel">
             <SelectTrigger className="w-full bg-background">
               <SelectValue>
                 {(v: string) => EVALUATORS.find((e) => e.value === v)?.label || "Seleccione un alumno"}
@@ -380,13 +378,11 @@ function VerCalificaciones() {
           <div className="flex gap-2">
 
           <Button className="gap-2 w-full sm:w-auto">
-            <Upload className="size-4" />
-            Anterior
+            Alumno Anterior
           </Button>
 
           <Button className="gap-2 w-full sm:w-auto">
-            <Upload className="size-4" />
-            Siguiente
+            Siguiente Alumno
           </Button>
 
           </div>
@@ -398,9 +394,8 @@ function VerCalificaciones() {
 
 
         <CardHeader className="pb-3 border-b border-border/50 bg-muted/10">
-          <div className="flex items-center justify-between">
-            <Badge variant="outline">{AUDIT_RECORD.student}</Badge>
-          </div>
+
+
           <CardTitle className="text-lg mt-2 leading-relaxed">
             {EXAM.question.prompt}
           </CardTitle>
@@ -426,7 +421,7 @@ function VerCalificaciones() {
         <Card className={editingA ? "border-primary/50 shadow-[0_0_0_3px] shadow-primary/10" : "border-border/70"}>
           <CardHeader className="flex-row items-center justify-between space-y-0 pb-4 border-b border-border/50 bg-muted/10">
             <div>
-              <CardTitle className="text-base flex items-center gap-2">Evaluador Gabriel</CardTitle>
+              <CardTitle className="text-base flex items-center gap-2">Evaluador Marcos: Gabriel</CardTitle>
             </div>
           </CardHeader>
           <CardContent className="pt-6 space-y-6">
@@ -461,7 +456,7 @@ function VerCalificaciones() {
         <Card className={editingB ? "border-primary/50 shadow-[0_0_0_3px] shadow-primary/10" : "border-border/70"}>
           <CardHeader className="flex-row items-center justify-between space-y-0 pb-4 border-b border-border/50 bg-muted/10">
             <div>
-              <CardTitle className="text-base flex items-center gap-2">Evaluador Gemini</CardTitle>
+              <CardTitle className="text-base flex items-center gap-2">Evaluador IA: Gemini</CardTitle>
             </div>
           </CardHeader>
           <CardContent className="pt-6 space-y-6">
@@ -496,16 +491,16 @@ function VerCalificaciones() {
       {/* 4. PREFERENCIA DEL ALUMNO */}
       <Card className="border-border/70 shadow-sm">
         <CardHeader className="pb-3 border-b border-border/50">
-          <CardTitle className="text-base text-primary">Preferencia del Alumno</CardTitle>
-          <CardDescription>¿Qué comentario consideró más útil el estudiante?</CardDescription>
+          <CardTitle className="text-base text-primary">Feedback preferido por el estudiante</CardTitle>
+          <CardDescription>¿Qué comentario del evaluador consideró más útil el estudiante?</CardDescription>
         </CardHeader>
         <CardContent className="pt-6 space-y-6">
           <RadioGroup value={choice} onValueChange={setChoice} className="grid gap-4 sm:grid-cols-2" disabled>
-            <ChoiceItem value="a" label="Prefirió el Feedback del Evaluador A" selected={choice === "a"} />
-            <ChoiceItem value="b" label="Prefirió el Feedback del Evaluador B" selected={choice === "b"} />
+            <ChoiceItem value="a" label="Prefirió el Feedback del Evaluador Humano Marcos" selected={choice === "a"} />
+            <ChoiceItem value="b" label="Prefirió el Feedback del Evaluador IA ChatGPT" selected={choice === "b"} />
           </RadioGroup>
           <div className="space-y-2">
-            <Label htmlFor="justify">Justificación del alumno</Label>
+            <Label htmlFor="justify">Motivo de la elección</Label>
 
 
 
@@ -549,6 +544,7 @@ function ChoiceItem({ value, label, selected }: { value: string; label: string; 
 // ... AQUÍ VAN LAS OTRAS VISTAS (AuditPage, GTheoryPage, MfrmPage, PreferencesPage, StatCard)
 // Son exactamente las mismas que en la versión anterior. 
 
+
 function AuditPage() {
   const pct = 10
   return (
@@ -571,25 +567,181 @@ function AuditPage() {
   )
 }
 
+
+/* ======================= PAGE B: G-Theory ======================= */
 function GTheoryPage() {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2">
-        <StatCard label="Generalizability Coefficient" value={G_STATS.gCoefficient.toFixed(2)} hint="Reliability" tone="primary" />
+        <StatCard
+          label="Generalizability Coefficient (Eρ²)"
+          value={G_STATS.gCoefficient.toFixed(2)}
+          hint="Relative decision reliability"
+          tone="primary"
+        />
+        <StatCard
+          label="Dependability Index (Φ)"
+          value={G_STATS.phi.toFixed(2)}
+          hint="Absolute decision reliability"
+          tone="success"
+        />
       </div>
+
+      <Card className="border-border/70">
+        <CardHeader>
+          <CardTitle className="text-base">Variance Components</CardTitle>
+          <CardDescription>
+            Proportion of total score variance attributable to each facet.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <VarianceChart />
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {VARIANCE_KEYS.map((k) => (
+              <div key={k.key} className="flex items-center gap-2 text-sm">
+                <span
+                  className="size-3 rounded-[3px]"
+                  style={{ background: k.color }}
+                />
+                <span className="text-muted-foreground">{k.label}</span>
+                <span className="font-semibold tabular-nums">
+                  {VARIANCE_COMPONENTS_VALUE(k.key)}%
+                </span>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-border/70">
+        <CardHeader>
+          <CardTitle className="text-base">D-Study Projection</CardTitle>
+          <CardDescription>
+            Projected reliability as the number of raters increases.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <DStudyChart />
+        </CardContent>
+      </Card>
     </div>
   )
 }
 
+function VARIANCE_COMPONENTS_VALUE(key: string) {
+  const rec = {
+    Persons: 65,
+    Raters: 12,
+    Items: 5,
+    Error: 18,
+  } as Record<string, number>
+  return rec[key]
+}
+
+/* ======================= PAGE C: MFRM ======================= */
 function MfrmPage() {
   return (
-    <Card className="border-border/70"><CardHeader><CardTitle>Wright Map</CardTitle></CardHeader></Card>
+    <div className="space-y-6">
+      <Card className="border-border/70">
+        <CardHeader>
+          <CardTitle className="text-base">Wright Map (Variable Map)</CardTitle>
+          <CardDescription>
+            Persons, judges, and items positioned on a shared logit scale.
+            Higher = greater ability / severity / difficulty.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <WrightMapChart />
+          <p className="mt-2 text-xs text-muted-foreground">
+            Note: Human judges cluster high (more severe), while Gemini sits low
+            (more lenient) — evidence of a rater-severity effect.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-border/70">
+        <CardHeader>
+          <CardTitle className="text-base">Rater Fit Statistics</CardTitle>
+          <CardDescription>
+            Infit mean-square. Values outside 0.6–1.4 indicate misfit
+            (over/under-discrimination).
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <RaterFitChart />
+        </CardContent>
+      </Card>
+    </div>
   )
 }
 
+/* ======================= PAGE D: Preferences ======================= */
 function PreferencesPage() {
   return (
-    <Card className="border-border/70"><CardHeader><CardTitle>Human vs AI</CardTitle></CardHeader></Card>
+    <div className="space-y-6">
+      <div className="grid gap-6 lg:grid-cols-2">
+        <Card className="border-border/70">
+          <CardHeader>
+            <CardTitle className="text-base">Human vs. AI Preference</CardTitle>
+            <CardDescription>
+              Share of respondents preferring each evaluator type.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <PreferencePie />
+          </CardContent>
+        </Card>
+
+        <Card className="border-border/70">
+          <CardHeader>
+            <CardTitle className="text-base">Which AI won?</CardTitle>
+            <CardDescription>
+              Preference share among AI evaluators.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <AiWinnersChart />
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card className="border-border/70">
+        <CardHeader>
+          <CardTitle className="text-base">Student Justifications</CardTitle>
+          <CardDescription>
+            Qualitative rationale behind each preference selection.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="max-h-96 space-y-3 overflow-y-auto pr-1">
+            {JUSTIFICATIONS.map((j) => (
+              <div
+                key={j.id}
+                className="rounded-lg border border-border/70 bg-card p-4"
+              >
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="text-xs font-medium text-muted-foreground">
+                    Respondent {j.respondent}
+                  </span>
+                  <Badge
+                    className={
+                      j.choice === "AI"
+                        ? "bg-primary/10 text-primary hover:bg-primary/10"
+                        : "bg-chart-2/15 text-chart-2 hover:bg-chart-2/15"
+                    }
+                  >
+                    Preferred {j.choice}
+                  </Badge>
+                </div>
+                <p className="text-sm leading-relaxed text-foreground/80">
+                  {j.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   )
 }
 
