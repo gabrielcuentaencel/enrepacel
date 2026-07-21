@@ -50,7 +50,7 @@ export function AuthView({ onLogin }: { onLogin: (role: Role) => void }) {
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Access the platform</CardTitle>
             <CardDescription>
-              Sign in or create a research account to continue.
+              234-Sign in or create a research account to continue.
             </CardDescription>
           </CardHeader>
           <CardContent>

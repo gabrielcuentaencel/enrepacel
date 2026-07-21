@@ -74,6 +74,13 @@
       },
       "api": {
         "CrearExamen": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {},
+        "amplifyhosting": {
+          "appId": "d39ol6epx3vnkq",
+          "type": "manual"
+        }
       }
     }
   }
