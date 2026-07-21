@@ -4,12 +4,8 @@ import { useState } from "react"
 import { AuthView } from "@/components/psy/auth-view"
 import { StudentView } from "@/components/psy/student-view"
 import { TeacherView } from "@/components/psy/teacher-view"
-
-import { AuditorView } from "@/components/psy/auditor-view"
 import { ListadoDeExamenesView } from "@/components/psy/listadoDeExamenes-view"
 
-//import { AuditPage } from "@/components/psy/auditor-view"
-//import { MfrmPage } from "@/components/psy/auditor-view"
 
 import type { Role } from "@/lib/mock-data"
 
@@ -23,7 +19,6 @@ export default function Page() {
 
   if (view === "student") return <StudentView onLogout={() => setView("auth")} />
   if (view === "teacher") return <TeacherView onLogout={() => setView("auth")} />
-  //if (view === "auditor") return <AuditorView onLogout={() => setView("auth")} />
   if (view === "auditor") return <ListadoDeExamenesView onLogout={() => setView("auth")} />
   if (view === "listadoDeExamenes") return <ListadoDeExamenesView onLogout={() => setView("auth")} />
 
