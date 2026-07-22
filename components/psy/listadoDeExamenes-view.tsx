@@ -144,11 +144,34 @@ export function ListadoDeExamenesView({ onLogout }: { onLogout: () => void }) {
 
       {/* ======================= MAIN CONTENT ======================= */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center justify-between border-b border-border bg-card px-4 py-3 lg:hidden">
-          <Brand subtitle={false} />
-          <Button variant="outline" size="sm" onClick={onLogout} className="gap-1.5">
-            <LogOut className="size-4" />
-          </Button>
+        <div className="border-b border-border bg-card lg:hidden">
+          <div className="flex items-center justify-between gap-3 px-4 py-3">
+            <Brand subtitle={false} />
+            <Button variant="outline" size="sm" onClick={onLogout} className="gap-1.5">
+              <LogOut className="size-4" />
+              <span className="sr-only">Logout</span>
+            </Button>
+          </div>
+          <div className="flex gap-2 border-t border-border px-4 py-2">
+            <Button
+              variant={currentView === "crear" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => setCurrentView("crear")}
+              className="flex-1 gap-2"
+            >
+              <PlusCircle className="size-4 shrink-0" />
+              Crear examen
+            </Button>
+            <Button
+              variant={currentView === "listar" || currentView === "detalle" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => setCurrentView("listar")}
+              className="flex-1 gap-2"
+            >
+              <List className="size-4 shrink-0" />
+              Exámenes
+            </Button>
+          </div>
         </div>
 
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
@@ -176,7 +199,7 @@ function CrearExamenView() {
   return (
     <div className="max-w-2xl animate-in fade-in duration-300">
       <header className="mb-6">
-        <h1 className="font-serif text-2xl font-semibold tracking-tight">Crear Nuevo Examen</h1>
+        <h1 className="font-serif text-xl font-semibold tracking-tight text-balance sm:text-2xl">Crear Nuevo Examen</h1>
         <p className="text-sm text-muted-foreground">Configura los detalles y sube el banco de preguntas.</p>
       </header>
 
@@ -212,7 +235,7 @@ function RespuestaDeExamenCreadoView({ onReset }: { onReset: () => void }) {
   return (
     <div className="max-w-2xl animate-in zoom-in-95 duration-500">
       <header className="mb-6">
-        <h1 className="font-serif text-2xl font-semibold tracking-tight">Proceso Finalizado</h1>
+        <h1 className="font-serif text-xl font-semibold tracking-tight text-balance sm:text-2xl">Proceso Finalizado</h1>
         <p className="text-sm text-muted-foreground">Resumen de la operación.</p>
       </header>
 
@@ -246,7 +269,7 @@ function ListarExamenesView({ onSelectExam }: { onSelectExam: (exam: any) => voi
   return (
     <div>
       <header className="mb-6">
-        <h1 className="font-serif text-2xl font-semibold tracking-tight">Listado de Exámenes</h1>
+        <h1 className="font-serif text-xl font-semibold tracking-tight text-balance sm:text-2xl">Listado de Exámenes</h1>
         <p className="text-sm text-muted-foreground">Selecciona un examen para ver sus análisis y detalles.</p>
       </header>
 
@@ -279,33 +302,38 @@ function DetalleExamenView({ examName }: { examName: string }) {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="mb-6">
-        <h1 className="font-serif text-2xl font-semibold tracking-tight text-primary">
+        <h1 className="font-serif text-xl font-semibold tracking-tight text-balance break-words text-primary sm:text-2xl">
           {examName}
         </h1>
         <p className="text-sm text-muted-foreground">Panel de análisis.</p>
       </header>
 
       <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as DetailTab)} className="w-full">
-        <TabsList className="mb-6 flex flex-wrap w-full h-auto p-1 gap-1 justify-start">
+        <TabsList className="mb-6 grid w-full! grid-cols-2 gap-1 p-1 h-auto! group-data-horizontal/tabs:h-auto! sm:grid-cols-3 lg:grid-cols-5">
 
-          <TabsTrigger value="audit" className="gap-2 py-2.5 flex-1 min-w-[150px]">
-            <ClipboardList className="size-4" /> Preguntas del examen
+          <TabsTrigger value="audit" className="min-h-11 h-auto! gap-2 py-2.5 text-xs sm:text-sm">
+            <ClipboardList className="size-4 shrink-0" />
+            <span className="truncate">Preguntas del examen</span>
           </TabsTrigger>
 
-          <TabsTrigger value="calificaciones" className="gap-2 py-2.5 flex-1 min-w-[150px]">
-            <FileCheck className="size-4" /> Correccion de examen
+          <TabsTrigger value="calificaciones" className="min-h-11 h-auto! gap-2 py-2.5 text-xs sm:text-sm">
+            <FileCheck className="size-4 shrink-0" />
+            <span className="truncate">Correccion de examen</span>
           </TabsTrigger>
 
-          <TabsTrigger value="preferences" className="gap-2 py-2.5 flex-1 min-w-[150px]">
-            <GitCompareArrows className="size-4" /> Evaluacion corrector
+          <TabsTrigger value="preferences" className="min-h-11 h-auto! gap-2 py-2.5 text-xs sm:text-sm">
+            <GitCompareArrows className="size-4 shrink-0" />
+            <span className="truncate">Evaluacion corrector</span>
           </TabsTrigger>
 
-          <TabsTrigger value="gtheory" className="gap-2 py-2.5 flex-1 min-w-[150px]">
-            <BarChart2 className="size-4" /> Generalizability Theory
+          <TabsTrigger value="gtheory" className="min-h-11 h-auto! gap-2 py-2.5 text-xs sm:text-sm">
+            <BarChart2 className="size-4 shrink-0" />
+            <span className="truncate">Generalizability Theory</span>
           </TabsTrigger>
 
-          <TabsTrigger value="mfrm" className="gap-2 py-2.5 flex-1 min-w-[150px]">
-            <SplitSquareVertical className="size-4" /> Many-Facet Rasch
+          <TabsTrigger value="mfrm" className="min-h-11 h-auto! gap-2 py-2.5 text-xs sm:text-sm">
+            <SplitSquareVertical className="size-4 shrink-0" />
+            <span className="truncate">Many-Facet Rasch</span>
           </TabsTrigger>
         </TabsList>
 
@@ -338,7 +366,7 @@ function VerCalificaciones() {
         <Card className="border-border/70 p-4 space-y-3 shadow-sm bg-muted/20">
           <Label className="text-sm font-semibold">Pregunta:</Label>
           <Select defaultValue="Pregunta 1">
-            <SelectTrigger className="gap-2 sm:w-auto">
+            <SelectTrigger className="w-full gap-2 bg-background">
               <SelectValue placeholder="Seleccione una pregunta" />
             </SelectTrigger>
             <SelectContent>
@@ -347,13 +375,13 @@ function VerCalificaciones() {
               <SelectItem value="Pregunta 3">Pregunta 3: Ética Clínica</SelectItem>
             </SelectContent>
           </Select>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row">
 
-          <Button className="gap-2 w-full sm:w-auto">
+          <Button className="min-h-11 w-full gap-2 sm:w-auto">
             Pregunta Anterior
           </Button>
 
-          <Button className="gap-2 w-full sm:w-auto">
+          <Button className="min-h-11 w-full gap-2 sm:w-auto">
             Siguiente Pregunta
           </Button>
 
@@ -375,13 +403,13 @@ function VerCalificaciones() {
               ))}
             </SelectContent>
           </Select>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row">
 
-          <Button className="gap-2 w-full sm:w-auto">
+          <Button className="min-h-11 w-full gap-2 sm:w-auto">
             Alumno Anterior
           </Button>
 
-          <Button className="gap-2 w-full sm:w-auto">
+          <Button className="min-h-11 w-full gap-2 sm:w-auto">
             Siguiente Alumno
           </Button>
 

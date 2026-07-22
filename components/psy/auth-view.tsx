@@ -86,6 +86,7 @@ export function AuthView({ onLogin }: { onLogin: (role: Role) => void }) {
                 </Button>
               </TabsContent>
 
+
               {/* REGISTER */}
               <TabsContent value="register" className="mt-5 space-y-4">
                 <Field
@@ -117,6 +118,8 @@ export function AuthView({ onLogin }: { onLogin: (role: Role) => void }) {
                   <ArrowRight className="size-4" />
                 </Button>
               </TabsContent>
+
+
             </Tabs>
           </CardContent>
         </Card>

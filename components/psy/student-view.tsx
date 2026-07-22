@@ -48,9 +48,9 @@ export function StudentView({ onLogout }: { onLogout: () => void }) {
           {/* ---------------- EXAM PANEL ---------------- */}
           <TabsContent value="exam" className="space-y-6">
             <div>
-              <div className="mb-2 flex items-end justify-between">
-                <div>
-                  <h2 className="font-serif text-xl font-semibold tracking-tight">
+              <div className="mb-2 flex flex-wrap items-end justify-between gap-x-4 gap-y-1">
+                <div className="min-w-0">
+                  <h2 className="font-serif text-lg font-semibold tracking-tight text-balance sm:text-xl">
                     {EXAM.title}
                   </h2>
                   <p className="text-sm text-muted-foreground">
