@@ -35,10 +35,10 @@ export function StudentView({ onLogout }: { onLogout: () => void }) {
         <Tabs defaultValue="exam" className="w-full">
           <TabsList className="mb-6 grid w-full max-w-md grid-cols-2">
             <TabsTrigger value="exam" className="gap-1.5">
-              <ClipboardList className="size-4" /> Exam Panel
+              <ClipboardList className="size-4" /> 2Exam Panel
             </TabsTrigger>
             <TabsTrigger value="feedback" className="gap-1.5">
-              <GitCompareArrows className="size-4" /> Feedback Eval
+              <GitCompareArrows className="size-4" /> 3Feedback Eval
             </TabsTrigger>
           </TabsList>
 
