@@ -38,10 +38,10 @@ export function AuthView({ onLogin }: { onLogin: (role: Role) => void }) {
         <div className="mb-8 flex flex-col items-center text-center">
           <Brand subtitle={false} className="mb-5" />
           <h1 className="text-pretty font-serif text-2xl font-semibold tracking-tight">
-            AI vs. Human Evaluation in Psychometrics
+            22-AI vs. Human Evaluation in Psychometrics
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            A research platform for comparative rater analysis, generalizability
+            33-A research platform for comparative rater analysis, generalizability
             &amp; Rasch modeling.
           </p>
         </div>
